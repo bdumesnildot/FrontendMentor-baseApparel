@@ -1,0 +1,172 @@
+/*-----Font-----*/
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+
+
+
+
+/*-----Variables-----*/
+
+:root{
+    --Desaturated_Red: hsl(0, 36%, 70%);
+    --Soft_Red: hsl(0, 93%, 68%);
+    --Dark_Grayish_Red: hsl(0, 6%, 24%)
+}
+
+
+
+/*-----Layout-----*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body main {
+    width: 100vw;
+    height: 100vh;
+    
+    display: grid;
+    grid-template-columns: 60% 40%;
+}
+
+body main .info-container{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    background-image: url(./assets/images/bg-pattern-desktop.svg), linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+}
+
+body main .info-container .logo{
+    width: 6em;
+    margin: 1.5em 10vw;
+}
+
+body main .info-container-text{
+    margin: 1.5em 10vw;
+}
+
+body main .info-container-text h1, p, form{
+    margin: 0.5em 0;
+}
+
+body main .info-container-text form{
+    position: relative;
+}
+
+input{
+    position: absolute;
+
+    height: 3em;
+    width: 99%;
+
+    border: 1px solid transparent;
+    border-radius: 1.5em;
+    background: 
+        linear-gradient(135deg, #f8bfbf, #ee8c8c) padding-box;
+
+}
+
+input::placeholder {
+    color: #ee8c8c;
+    padding-left: 1.5vw;
+}
+
+button{
+    position: absolute;
+    right: 0px;
+    z-index: 10;
+    
+    height: 3em;
+    width: 5em;
+    border-radius: 1.5em;
+    border-style: solid;
+    border-image: none;
+    border-image-source: linear-gradient(135deg, #f8bfbf, #ee8c8c);
+    border-image-slice: 1;
+    background-image: linear-gradient(135deg, #f8bfbf, #ee8c8c);
+    
+
+    box-shadow: #707070 0 20px 30px;
+}
+
+
+
+/*-----Responsive-----*/
+
+.mainImage-desktop {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    
+}
+
+.mainImage-mobile {
+    display: none;
+}
+
+@media screen and (max-width: 375px) {
+
+    body main {
+        display: block;
+    }
+
+    .mainImage-desktop {
+        display: none;
+    }
+
+    .mainImage-mobile {
+        width: 100%;
+        display:block ;
+    }
+
+    body main .info-container-text h1, p{
+        text-align: center;
+    }
+}
+
+/*-----Text-----*/
+* {
+    font-family: 'Josefin Sans', sans-serif;
+    color: var(--Desaturated_Red);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: 300;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+
+h1 span {
+    font-size: 32px;
+    color: var(--Dark_Grayish_Red);
+    font-weight: 600;
+    display: block;
+}
+
+p {
+    line-height: 1.3;
+}
+
+
+.footer {
+    opacity: 0.5;
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+.attribution a { 
+    font-size: 11px; 
+    color: hsl(228, 45%, 44%); 
+}
+
